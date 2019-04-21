@@ -14,8 +14,9 @@ namespace BL_8_Struct_Enum_Tuple_Generic
         /// <summary>
         /// BL8-P1/3. Cоздать структуру 2DRectangle, которая будет содержать ширину, высоту и координату.
         /// </summary>
-        public static void Lb8_P1_3()
+        public struct Rectangle2D
         {
+            private int Width, Height, XCoord, YCoord;
         }
 
 
@@ -25,6 +26,17 @@ namespace BL_8_Struct_Enum_Tuple_Generic
         /// </summary>
         public static void Lb8_P2_3()
         {
+            Square[] ArrayOfSquare = new Square[100];
+            for (int i = 0; i < ArrayOfSquare.Length; i++)
+            {
+                ArrayOfSquare[i].Side = random.Next(10);
+            }
+            int Count = ArrayOfSquare.Length - ArrayOfSquare.Distinct().ToArray().Length;
+        }
+
+        public struct Square
+        {
+            public int Side;
         }
 
         /// <summary>
